@@ -66,7 +66,7 @@ model.add(Dense(1))
 model.compile(loss='mean_squared_error', optimizer='adam')
 
 for i in range(100):
-    model.fit(trainX, trainY, epochs=1, batch_size=batch_size, verbose=2, shuffle=False)
+    model.fit(trainX, trainY, epochs=3, batch_size=batch_size, verbose=2, shuffle=True)
     model.reset_states()
 
 trainPredict = model.predict(trainX, batch_size=batch_size)
